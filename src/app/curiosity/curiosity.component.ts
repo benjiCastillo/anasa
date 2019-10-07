@@ -8,12 +8,12 @@ import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./curiosity.component.css']
 })
 export class CuriosityComponent implements OnInit {
-  images:Array<any> = [];
+  images:any= [];
   constructor(private curiosityService: CuriosityService) { }
 
   ngOnInit() {
     this.curiosityService.getImages().subscribe(
-      (res: HttpResponse<any>) => {
+      (res:any) => {
         console.log(res.photos);
         this.images = res.photos;
       },

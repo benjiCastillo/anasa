@@ -1,6 +1,6 @@
-<section *ngFor="let image of images;let i = index;">
-  <figure>
-    <h4>Camara {{ image.camera.name }} {{ image.camera.fullname }}</h4>
-    <img [src]="image.img_src" [alt]="image.earth_date">
-  </figure>
-</section>
+<div *ngFor="let image of images;let i = index;" class="col-12">
+
+    <h4>Cámara {{ image.camera.name }} {{ image.camera.fullname }}</h4>
+    <img class="img-fluid" [src]="image.img_src" [alt]="image.earth_date">
+    <hr>
+</div>
